@@ -1,19 +1,22 @@
 # `Facebook Clone` : Official Interactive Clone With React JS & Firebase
 <!-- <p align=center>
 <br><br><br>
-<img src="./assets/github_icon.jpg" width="300">
+<img src="./public/github_icon.jpg" width="300">
 <br><br><br> -->
 
 <p align="center">
   <a href="https://facebook-clone-132ae.web.app">
-    <img src="./assets/github_icon.png" 
-    alt="facebook-icon" width="8%" />
+    <img src="./public/github_icon.png" 
+    alt="facebook-icon" width="16%" />
   </a>
 </p>
+<h1 align="center">
+  `Facebook Clone` : Official Interactive Clone With React JS & Firebase
+</h1>
 
 <p align="center">
-  <a aria-label="Platforms">
-    <img src="https://img.shields.io/badge/platform-linux-windows-macos-lightgrey.svg&labelColor=000">
+  <a aria-label="Platforms" href="https://nodejs.org/en/download/">
+    <img alt="" src="https://img.shields.io/badge/platform-linux-windows-macos-lightgrey.svg&labelColor=000">
   </a>
   <a aria-label="NPM version" href="https://nodejs.org/en/download/">
     <img alt="" src="https://img.shields.io/npm/v/next.svg?style=for-the-badge&labelColor=000000">
@@ -22,7 +25,7 @@
     <img alt="" src="https://img.shields.io/npm/l/next.svg?style=for-the-badge&labelColor=000000">
   </a>
   <a aria-label="Make a Pull Request" href="http://makeapullrequest.com">
-    <img alt="" src="https://img.shields.io/badge/PRs-welcome-blueviolet.svg?style=for-the-badge&logo=Next.js&labelColor=000000&logoWidth=20">
+    <img alt="" src="https://img.shields.io/badge/PRs-welcome-blueviolet.svg?style=for-the-badge&labelColor=000000">
   </a>
 </p>
 
