@@ -25,15 +25,15 @@
 </p>
 
 --------------------
-> This clone is built with [React](https://reactjs.org/) as the Frontend Framework and uses [Firebase](https://firebase.google.com/) for Google Authentication, Real-time Database Updates, and Cloud Hosting
+> This clone is built with [React](https://reactjs.org/) as the Frontend Framework, using [Firebase](https://firebase.google.com/) for Google Authentication, Real-time Database Updates, and Cloud Hosting.
 
-- **Cloud Authentication:** Uses Google's Authentication Service to set Facebook's default poster as your account and imports your profile information (name, profilePic, timeZone) into the build.
+- **Cloud Authentication:** Uses Google's Authentication Service to set your account as the default poster and imports your profile information (name, profilePic, timeZone) into the build.
 
 <p align="center">
   <img src="./public/auth_demo.gif" alt="Authentication Demo" width="70%"/>
 </p>
 
-- **Real-time Database Updates:** Uses [React Hooks](https://reactjs.org/docs/hooks-intro.html) and [Firestore DB](https://firebase.google.com/docs/firestore) to update the feed and story reel with real-time snapshots from the collection of posts in the cloud. 
+- **Real-time Database Updates:** Uses [React Hooks](https://reactjs.org/docs/hooks-intro.html) and [Firestore DB](https://firebase.google.com/docs/firestore) to update the feed and story reel with real-time snapshots from posts collection in the cloud. 
 
 <p align="center">
   <img src="./public/db_demo.gif" alt="Database Demo" width="70%"/>
@@ -48,28 +48,28 @@
 git clone https://github.com/rexpository/facebook-clone.git
 cd facebook-clone
 ```
-> Setup a Firebase app and provide your own firebaseConfig in `src/firebase.js`
-- Go to the [Firebase Console](https://console.firebase.google.com/u/0/) and click "Add project"
-- Configure your project setup as you wish, but make sure you enable Google Analytics
+> Setup a Firebase Web app and Database.
+- Go to the [Firebase Console](https://console.firebase.google.com/u/0/) and click "Add project".
+- Configure your project setup as you wish, but make sure you enable Google Analytics.
 - Create a Web app on Firebase:
 
 <p align="center">
-  <img src="./public/fb_web.png" alt="Web App Demo" width="50%"/>
+  <img src="./public/fb_web.png" alt="Web App Demo" width="70%"/>
 </p>
 
-- While configuring your Web app, select "set up Firebase Hosting" and "use npm"
+- While configuring your Web app, select "set up Firebase Hosting" and "use npm".
 - Create a Firestore database in your Web app:
 
 <p align="center">
-  <img src="./public/fb_db.png" alt="FB DB Demo" width="50%"/>
+  <img src="./public/fb_db.png" alt="FB DB Demo" width="70%"/>
 </p>
 
-- While configuring your Web app, select "start in production mode"
-- Start a collection in your database and set the Collection ID as "posts"
-- For each post entry, autogenerate the Document ID with Auto-ID, and enter the following Fields & a value of your choice: `image` `message` `profilePic` `timestamp` `username`. Note: the Field Type for `timestamp` should be set to "timestamp" instead of "string". 
+- While configuring your Web app, select "start in production mode".
+- Start a collection in your database and set the Collection ID as "posts".
+- For each post entry, autogenerate the Document ID with Auto-ID, and enter the following Fields and Values of your choice: `image` `message` `profilePic` `timestamp` `username`. Note: the Field Type for `timestamp` should be set to `timestamp` instead of `string`. 
 
 <p align="center">
-  <img src="./public/db_sample.png" alt="FB DB Demo" width="50%"/>
+  <img src="./public/db_sample.png" alt="FB DB Demo" width="70%"/>
 </p>
 
 - After setting up your database, go to your project settings and scroll down to find your firebaseConfig constants, which should look something like this:
@@ -84,50 +84,52 @@ const firebaseConfig = {
   measurementId: "SAMPLEID"
 };
 ```
-- Replace the constants in `src/firebase.js` with your own firebaseConfig constants to link your Firebase database to the build
+- Replace the constants in `src/firebase.js` with your own firebaseConfig constants to link your Firebase database to the build.
 
 ## Testing & Hosting the Application on localhost
-> Install the dependencies in the local node_modules folder.
+> Install the dependencies in the local `node_modules` folder.
 ```
 npm install
 ```
-> Compile and host the application on localhost:3000
+> Compile and host the application on `localhost:3000`.
 ```
 npm run start
 ```
 
 ## Building & Hosting the Application on Firebase
-> Install the Firebase CLI for web hosting
+> Install the Firebase CLI for web hosting.
 ```
 npm i -g firebase-tools
 ```
-> Login to the Firebase console through your google account
+> Login to the Firebase console through your google account.
 ```
 firebase login
 ```
-> Initialitze and Configure your Firebase project
+> Initialitze and Configure your Firebase project.
+```
+firebase init
+```
+### Configuration Steps:
+- Select "Hosting: configure files for Firebase Hosting"
+- Select "Use an existing project"
+- Select your Firebase project from the list
+- Set public directory as "build"
+- Configure as a single-page app: Yes
+- Set up automatic builds with Github: No
+> Build and bundle your Web app into a package.
 ```
 firebase login
 ```
-- select "Hosting: configure files for Firebase Hosting"
-- select "Use an existing project"
-- select your Firebase project from the list
-- set public directory as "build"
-- configure as a single-page app: Yes
-- set up automatic builds with Github: No
-> Build and bundle your Web app into a package
-```
-firebase login
-```
-> Deploy and Host your Firebase project
+> Deploy and Host your Firebase project.
 ```
 firebase deploy
 ```
 ## Contributing
-All contributions are welcome, directly send PRs!🎉 Make sure development is done and tested in `NPM >= 13`.
+All contributions are welcome, directly send PRs!🎉 Make sure development is done and tested in `npm >= 13`.
 
 ## Todo
-- Add friendsBook and chatting feature
-- Upgrade npm and package to latest versions
-- Minor Visual Changes
 - Integrate messenger clone 
+- Add friendsBook and chatting feature
+- Minor Visual Changes
+- Upgrade npm and package to latest versions
+
