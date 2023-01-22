@@ -41,21 +41,17 @@
 
 ## Demo Live @ https://facebook-clone-132ae.web.app
 
-## Testing & Hosting the Application on localhost
+## Installing and Configuring your build
 
 > Clone this repository and change the working directory.
 ```
 git clone https://github.com/rexpository/facebook-clone.git
 cd facebook-clone
 ```
-> Install the dependencies in the local node_modules folder.
-```
-npm install
-```
-> Setup a firebase app and provide your own firebaseConfig in `src/firebase.js`
+> Setup a Firebase app and provide your own firebaseConfig in `src/firebase.js`
 - Go to the [Firebase Console](https://console.firebase.google.com/u/0/) and click "Add project"
 - Configure your project setup as you wish, but make sure you enable Google Analytics
-- Create a Web app on firebase:
+- Create a Web app on Firebase:
 
 <p align="center">
   <img src="./public/fb_web.png" alt="Web App Demo" width="50%"/>
@@ -88,29 +84,50 @@ const firebaseConfig = {
   measurementId: "SAMPLEID"
 };
 ```
-- Replace the constants in `src/firebase.js` with your own firebaseConfig constants to link your firebase database to the build
+- Replace the constants in `src/firebase.js` with your own firebaseConfig constants to link your Firebase database to the build
+
+## Testing & Hosting the Application on localhost
+> Install the dependencies in the local node_modules folder.
+```
+npm install
+```
 > Compile and host the application on localhost:3000
 ```
 npm run start
 ```
 
-
-### Building & Hosting the Application on Firebase
-
-- cd...
-- npm i -g firebase-tools
-
-- firebase login
-(Log in through google)
-
-- firebase init
+## Building & Hosting the Application on Firebase
+> Install the Firebase CLI for web hosting
+```
+npm i -g firebase-tools
+```
+> Login to the Firebase console through your google account
+```
+firebase login
+```
+> Initialitze and Configure your Firebase project
+```
+firebase login
+```
 - select "Hosting: configure files for Firebase Hosting"
 - select "Use an existing project"
 - select your Firebase project from the list
 - set public directory as "build"
 - configure as a single-page app: Yes
 - set up automatic builds with Github: No
+> Build and bundle your Web app into a package
+```
+firebase login
+```
+> Deploy and Host your Firebase project
+```
+firebase deploy
+```
+## Contributing
+All contributions are welcome, directly send PRs!🎉 Make sure development is done and tested in `NPM >= 13`.
 
-- npm run build
-
-- firebase deploy
+## Todo
+- Add friendsBook and chatting feature
+- Upgrade npm and package to latest versions
+- Minor Visual Changes
+- Integrate messenger clone 
