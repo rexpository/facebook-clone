@@ -5,7 +5,7 @@
   </a>
 </p>
 <h2 align="center">
-  Facebook Clone: Official Interactive Clone With React JS & Firebase
+  Official Facebook Clone: Interactive Clone With React JS & Firebase
 </h2>
 
 <p align="center">
@@ -39,35 +39,63 @@
   <img src="./public/db_demo.gif" alt="Database Demo" width="70%"/>
 </p>
 
+## Demo Live @ https://facebook-clone-132ae.web.app
+
+## Testing & Hosting the Application on localhost
+
+> Clone this repository and change the working directory.
+```
+git clone https://github.com/rexpository/facebook-clone.git
+cd facebook-clone
+```
+> Install the dependencies in the local node_modules folder.
+```
+npm install
+```
+> Setup a firebase app and provide your own firebaseConfig in `src/firebase.js`
+- Go to the [Firebase Console](https://console.firebase.google.com/u/0/) and click "Add project"
+- Configure your project setup as you wish, but make sure you enable Google Analytics
+- Create a Web app on firebase:
+
+<p align="center">
+  <img src="./public/fb_web.png" alt="Web App Demo" width="50%"/>
+</p>
+
+- While configuring your Web app, select "set up Firebase Hosting" and "use npm"
+- Create a Firestore database in your Web app:
+
+<p align="center">
+  <img src="./public/fb_db.png" alt="FB DB Demo" width="50%"/>
+</p>
+
+- While configuring your Web app, select "start in production mode"
+- Start a collection in your database and set the Collection ID as "posts"
+- For each post entry, autogenerate the Document ID with Auto-ID, and enter the following Fields & a value of your choice: `image` `message` `profilePic` `timestamp` `username`. Note: the Field Type for `timestamp` should be set to "timestamp" instead of "string". 
+
+<p align="center">
+  <img src="./public/db_sample.png" alt="FB DB Demo" width="50%"/>
+</p>
+
+- After setting up your database, go to your project settings and scroll down to find your firebaseConfig constants, which should look something like this:
+```javascript
+const firebaseConfig = {
+  apiKey: "SAMPLEKEY",
+  authDomain: "test123.firebaseapp.com",
+  projectId: "test123",
+  storageBucket: "test123.appspot.com",
+  messagingSenderId: "12345678",
+  appId: "1:1234567:web:12345678",
+  measurementId: "SAMPLEID"
+};
+```
+- Replace the constants in `src/firebase.js` with your own firebaseConfig constants to link your firebase database to the build
+> Compile and host the application on localhost:3000
+```
+npm run start
+```
 
 
-
-
-
-### Description:
-
-- You need to provide your own firebaseConfig in `src/firebase.js`
-
-  Go to `https://console.firebase.google.com/u/0/` and make `new project`
-
-  Add `Web` as firebase app then go to `Firestore Database` and create new one.
-
-  Add `collections` - `messages` with message / timestamp / username
-
-  and `posts` - with image / message / profilePic / timestamp / username
-
-  Go to Project settings -> General and you should have all credentials you need.\
-
-### Live Demo Online @ https://facebook-clone-132ae.web.app
-
-### Deploying the application on localhost
-
-- cd...
-- npm install
-- change `src/firebase.js` -> firebaseConfig to your own
-- npm run start
-
-### Building and hosting the application
+### Building & Hosting the Application on Firebase
 
 - cd...
 - npm i -g firebase-tools
