@@ -109,13 +109,14 @@ firebase login
 ```
 firebase init
 ```
-### Configuration Steps:
+**Configuration Steps:**
 - Select "Hosting: configure files for Firebase Hosting"
 - Select "Use an existing project"
 - Select your Firebase project from the list
 - Set public directory as "build"
 - Configure as a single-page app: Yes
 - Set up automatic builds with Github: No
+
 > Build and bundle your Web app into a package.
 ```
 firebase login
